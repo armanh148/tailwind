@@ -1,155 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plug Tech</title>
-  <link rel="icon" href="favicon.png" type="image/icon">
-  <script src="https://cdn.tailwindcss.com"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first JS</title>
+    <link rel="icon" href="java logo.webp">
 </head>
-<body class="bg-gray-100 font-sans">
+<body>
+    <h1>welcome my first page</h1>
 
-  <!-- Sidebar -->
-  <div class="flex ">
-    <button class="md:hidden text-2xl" onclick="document.getElementById('sidebar').classList.toggle('hidden')">
-  ☰
-    </button>
-    <aside class="w-64 bg-gray-900 text-white hidden md:flex flex-col">
-      <div class="text-2xl font-bold p-6 border-b border-gray-700">Admin</div>
-      <nav class="flex-1 p-4 space-y-2">
-        <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded">
-          <span>📊</span><span>Dashboard</span>
-        </a>
-        <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded">
-          <span>📦</span><span>Orders</span>
-        </a>
-        <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded">
-          <span>🛒</span><span>Products</span>
-        </a>
-        <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded">
-          <span>👥</span><span>Customers</span>
-        </a>
-        <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded">
-          <span>📈</span><span>Reports</span>
-        </a>
-        <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded">
-          <span>⚙️</span><span>Settings</span>
-        </a>
-      </nav>
-    </aside>
+    <p id="output">Output Will Appear Here</p>
 
-    <!-- Main Content -->
-    <div class="flex-1 flex flex-col overflow-hidden">
-      
-      <!-- Top Navbar -->
-      <header class="bg-white shadow p-4 flex justify-between items-center">
-        <h1 class="text-xl font-bold">Plug Tech</h1>
-        <div class="flex flex-wrap items-center gap-2 sm:space-x-4">
-          <input type="text" placeholder="Search..." class="border rounded px-2 py-1" />
-          <span>🛒</span>
-          <span>🔔</span>
-          <img src="profile.png" width="70" class="rounded-full" alt="Profile" />
-        </div>
-      </header>
+    <button onclick="showMessage()">click me</button>
 
-      <!-- Page Header -->
-      <div class="p-6 bg-white border-b">
-        <h2 class="text-2xl font-semibold">Admin Dashboard</h2>
-        <p class="text-gray-600">Manage your store effectively</p>
-        <div class="mt-4 space-x-2">
-          <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Add Product</button>
-          <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Generate Report</button>
-        </div>
-      </div>
+    <!--add external javascript-->
+    <script src="first.js"></script>
 
-      <!-- Overview Cards --> 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-6">
-        <div class="bg-white p-4 rounded shadow">
-          <div class="text-gray-600">📦 Total Orders</div>
-          <div class="text-2xl font-bold">14,512</div>
-        </div>
-        <div class="bg-white p-4 rounded shadow">
-          <div class="text-gray-600">💰 Total Revenue</div>
-          <div class="text-2xl font-bold">$67,000</div>
-        </div>
-        <div class="bg-white p-4 rounded shadow">
-          <div class="text-gray-600">👥 New Customers</div>
-          <div class="text-2xl font-bold">572</div>
-        </div>
-        <div class="bg-white p-4 rounded shadow">
-          <div class="text-gray-600">📦 Products in Stock</div>
-          <div class="text-2xl font-bold">2,700</div>
-        </div>
-      </div>
-
-      <!-- Sales Chart & Traffic Source -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 p-6">
-        <div class="bg-white p-6 rounded shadow h-64">
-          <h3 class="text-lg font-semibold mb-2">Sales Chart</h3>
-          <div class="h-full bg-gray-100 flex items-center justify-center">[Chart Placeholder]</div>
-        </div>
-        <div class="bg-white p-6 rounded shadow h-64">
-          <h3 class="text-lg font-semibold mb-2">Traffic Source</h3>
-          <div class="h-full bg-gray-100 flex items-center justify-center">[Pie Chart Placeholder]</div>
-        </div>
-      </div>
-
-      <!-- Recent Orders Table -->
-      <div class="p-6">
-        <div class="bg-white rounded shadow overflow-auto">
-          <table class="min-w-full text-sm">
-            <thead class="bg-gray-100">
-              <tr>
-                <th class="text-left px-4 py-2">Order ID</th>
-                <th class="text-left px-4 py-2">Customer</th>
-                <th class="text-left px-4 py-2">Product</th>
-                <th class="text-left px-4 py-2">Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-t">
-                <td class="px-4 py-2">#12345</td>
-                <td class="px-4 py-2 flex items-center space-x-2">
-                  <img src="jane doe.png" width="50" class="rounded-full" />
-                  <span>Jane Doe</span>
-                </td>
-                <td class="px-4 py-2">#Laptop</td>
-                <td class="px-4 py-2">2025-07-15</td>
-              </tr>
-              <!-- Add more rows here -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Product Cards -->
-      <div class="p-6 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 ">
-        <div class="bg-white p-4 rounded shadow">
-          <img src="apple macbook.png" width="50" alt="Product" class="w-full  object-cover rounded" />
-          <h4 class="text-lg font-semibold mt-2">Apple Macbook</h4>
-          <p class="text-gray-600">$2099.99</p>
-          <p class="text-green-600">In Stock</p>
-        </div>
-        <div class="bg-white p-4 rounded shadow">
-          <img src="pixel 9.png" width="100" alt="Product" class="w-full h-50 object-cover rounded" />
-          <h4 class="text-lg font-semibold mt-2">Pixel 9</h4>
-          <p class="text-gray-600">$1098.99</p>
-          <p class="text-red-600">Out of Stock</p>
-        </div>
-        <div class="bg-white p-4 rounded shadow">
-          <img src="samsung laptop.png" width="100" alt="Product" class="w-full  object-cover rounded" />
-          <h4 class="text-lg font-semibold mt-2">samsung laptop</h4>
-          <p class="text-gray-600">$2499.99</p>
-          <p class="text-green-600">In Stock</p>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <footer class="text-center p-4 text-gray-500">
-        Built with Tailwind CSS – Plug Tech
-      </footer>
-    </div>
-  </div>
 </body>
 </html>
